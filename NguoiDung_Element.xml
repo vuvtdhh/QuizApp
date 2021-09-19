@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DanhSach>
+<NguoiDung> 
+	<TaiKhoan>XML3</TaiKhoan>
+	<MatKhau>123</MatKhau>
+	<LoaiTaiKhoan>HocSinh</LoaiTaiKhoan>
+	<HoTen> Nguyen Van X</HoTen>
+	<NgaySinh>01/01/1990</NgaySinh>
+	<QueQuan>TP HCM</QueQuan>
+	<Sdt>0123456789</Sdt>
+	<Khoi>A00</Khoi>
+	<Lop>15CK5</Lop>
+</NguoiDung>
+<NguoiDung> 
+	<TaiKhoan>XML4</TaiKhoan>>
+	<MatKhau>123</MatKhau>
+	<LoaiTaiKhoan>GiaoVien</LoaiTaiKhoan>
+	<HoTen> Nguyen Van W</HoTen>
+	<NgaySinh>01/01/1990</NgaySinh>
+	<QueQuan>TP HCM</QueQuan>
+	<Sdt>0123456789</Sdt>
+	<Khoi></Khoi>
+	<Lop></Lop>
+</NguoiDung>
+</DanhSach>

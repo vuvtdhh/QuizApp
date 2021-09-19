@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DanhSach>
+<NguoiDung TaiKhoan="XML1" MatKhau="123456" LoaiTaiKhoan="HocSinh" HoTen="Nguyen Van A" NgaySinh="01/01/1990" QueQuan="TP HCM" Sdt="0123456789" Khoi="A00" Lop="15CK5" />
+<NguoiDung TaiKhoan="XML2" MatKhau="123456" LoaiTaiKhoan="GiaoVien" HoTen="Nguyen Van A" NgaySinh="01/01/1990" QueQuan="TP HCM" Sdt="0123456789" Khoi="" Lop="15CK5" />
+</DanhSach>

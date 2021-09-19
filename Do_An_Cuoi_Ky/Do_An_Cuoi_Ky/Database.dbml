@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LTUDQL1" Class="DatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-DTM77JK\SQLEXPRESS;Initial Catalog=LTUDQL1;Integrated Security=True" SettingsObjectName="Do_An_Cuoi_Ky.Properties.Settings" SettingsPropertyName="LTUDQL1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="Stt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TaiKhoan" Type="System.String" DbType="Char(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="LoaiTaiKhoan" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Sdt" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="QueQuan" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Khoi" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="Lop" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Association Name="User_KetQuaThi" Member="KetQuaThis" ThisKey="Stt,TaiKhoan" OtherKey="ID,TaiKhoan" Type="KetQuaThi" />
+      <Association Name="Khoi_User" Member="Khoi1" ThisKey="Khoi" OtherKey="TenKhoi" Type="Khoi" IsForeignKey="true" />
+      <Association Name="QueQuan_User" Member="QueQuan1" ThisKey="QueQuan" OtherKey="TenTinhThanh" Type="QueQuan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Khoi" Member="Khois">
+    <Type Name="Khoi">
+      <Column Name="TenKhoi" Type="System.String" DbType="Char(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Khoi_User" Member="Users" ThisKey="TenKhoi" OtherKey="Khoi" Type="User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QueQuan" Member="QueQuans">
+    <Type Name="QueQuan">
+      <Column Name="TenTinhThanh" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="QueQuan_User" Member="Users" ThisKey="TenTinhThanh" OtherKey="QueQuan" Type="User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DeThi" Member="DeThis">
+    <Type Name="DeThi">
+      <Column Name="MaDe" Type="System.String" DbType="Char(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MonHoc" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="MaMonHoc" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="Cau01" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cau02" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cau03" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cau04" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cau05" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cau06" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cau07" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cau08" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cau09" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cau10" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DeThi_KetQuaThi" Member="KetQuaThis" ThisKey="MaDe" OtherKey="MaDe" Type="KetQuaThi" />
+      <Association Name="CauHoi_DeThi" Member="CauHoi" ThisKey="Cau01" OtherKey="ID" Type="CauHoi" IsForeignKey="true" />
+      <Association Name="CauHoi_DeThi1" Member="CauHoi1" ThisKey="Cau02" OtherKey="ID" Type="CauHoi" IsForeignKey="true" />
+      <Association Name="CauHoi_DeThi2" Member="CauHoi2" ThisKey="Cau03" OtherKey="ID" Type="CauHoi" IsForeignKey="true" />
+      <Association Name="CauHoi_DeThi3" Member="CauHoi3" ThisKey="Cau04" OtherKey="ID" Type="CauHoi" IsForeignKey="true" />
+      <Association Name="CauHoi_DeThi4" Member="CauHoi4" ThisKey="Cau05" OtherKey="ID" Type="CauHoi" IsForeignKey="true" />
+      <Association Name="CauHoi_DeThi5" Member="CauHoi5" ThisKey="Cau06" OtherKey="ID" Type="CauHoi" IsForeignKey="true" />
+      <Association Name="CauHoi_DeThi6" Member="CauHoi6" ThisKey="Cau07" OtherKey="ID" Type="CauHoi" IsForeignKey="true" />
+      <Association Name="CauHoi_DeThi7" Member="CauHoi7" ThisKey="Cau08" OtherKey="ID" Type="CauHoi" IsForeignKey="true" />
+      <Association Name="CauHoi_DeThi8" Member="CauHoi8" ThisKey="Cau09" OtherKey="ID" Type="CauHoi" IsForeignKey="true" />
+      <Association Name="CauHoi_DeThi9" Member="CauHoi9" ThisKey="Cau10" OtherKey="ID" Type="CauHoi" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KetQuaThi" Member="KetQuaThis">
+    <Type Name="KetQuaThi">
+      <Column Name="Stt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TaiKhoan" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MaDe" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="Cau01" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Cau02" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Cau03" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Cau04" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Cau05" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Cau06" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Cau07" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Cau08" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Cau09" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Cau10" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="DiemThi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="User_KetQuaThi" Member="User" ThisKey="ID,TaiKhoan" OtherKey="Stt,TaiKhoan" Type="User" IsForeignKey="true" />
+      <Association Name="DeThi_KetQuaThi" Member="DeThi" ThisKey="MaDe" OtherKey="MaDe" Type="DeThi" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KyThiThu" Member="KyThiThus">
+    <Type Name="KyThiThu">
+      <Column Name="MaKyThi" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TuNgay" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DenNgay" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DanhSachThiSinh" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DanhSachDeThi" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CauHoi" Member="CauHois">
+    <Type Name="CauHoi">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MonHoc" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CauHoi" Member="CauHoi1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="A" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="B" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="C" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="D" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DapAnDung" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="GoiY" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DoKho" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoLanRaDe" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoLanTraLoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoLanTraLoiDung" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CauHoi_DeThi" Member="DeThis" ThisKey="ID" OtherKey="Cau01" Type="DeThi" />
+      <Association Name="CauHoi_DeThi1" Member="DeThis1" ThisKey="ID" OtherKey="Cau02" Type="DeThi" />
+      <Association Name="CauHoi_DeThi2" Member="DeThis2" ThisKey="ID" OtherKey="Cau03" Type="DeThi" />
+      <Association Name="CauHoi_DeThi3" Member="DeThis3" ThisKey="ID" OtherKey="Cau04" Type="DeThi" />
+      <Association Name="CauHoi_DeThi4" Member="DeThis4" ThisKey="ID" OtherKey="Cau05" Type="DeThi" />
+      <Association Name="CauHoi_DeThi5" Member="DeThis5" ThisKey="ID" OtherKey="Cau06" Type="DeThi" />
+      <Association Name="CauHoi_DeThi6" Member="DeThis6" ThisKey="ID" OtherKey="Cau07" Type="DeThi" />
+      <Association Name="CauHoi_DeThi7" Member="DeThis7" ThisKey="ID" OtherKey="Cau08" Type="DeThi" />
+      <Association Name="CauHoi_DeThi8" Member="DeThis8" ThisKey="ID" OtherKey="Cau09" Type="DeThi" />
+      <Association Name="CauHoi_DeThi9" Member="DeThis9" ThisKey="ID" OtherKey="Cau10" Type="DeThi" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KyThi" Member="KyThis">
+    <Type Name="KyThi">
+      <Column Name="MaKyThi" Type="System.String" DbType="Char(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NgayThi" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DanhSachThiSinh" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DanhSachDeThi" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LichThi" Member="LichThis">
+    <Type Name="LichThi">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TaiKhoan" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="MaKyThi" Type="System.String" DbType="NChar(4)" CanBeNull="true" />
+      <Column Name="NgayThi" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="GioThi" Type="System.TimeSpan" DbType="Time NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PhongThi" Type="System.String" DbType="Char(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MonThi" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

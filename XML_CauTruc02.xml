@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeThi>
+<CauHoi> 
+	<MonHoc>Toán</MonHoc>
+	<NoiDungCauHoi>Câu hỏi test</NoiDungCauHoi>
+	<A>Đáp án A</A>
+	<B>Đáp án B</B>
+	<C>Đáp án C</C>
+	<D>Đáp án D</D>
+	<DapAnDung>A</DapAnDung>
+	<GoiY>Đây là gợi ý</GoiY>
+	<DoKho>1</DoKho>
+</CauHoi>
+<CauHoi>
+	<MonHoc>Toán</MonHoc>
+	<NoiDungCauHoi>Câu hỏi test 2</NoiDungCauHoi>
+	<A>Đáp án A</A>
+	<B>Đáp án B</B>
+	<C>Đáp án C</C>
+	<D>Đáp án D</D>
+	<DapAnDung>A</DapAnDung>
+	<GoiY>Đây là gợi ý</GoiY>
+	<DoKho>1</DoKho>
+</CauHoi>
+</DeThi>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeThi>
+<CauHoi MonHoc="Vật Lý" CauHoi="Chọn kết luận đúng khi nói về dao động điều hoà cuả con lắc lò xo:" A="Vận tốc tỉ lệ thuận với thời gian." B="Gia tốc tỉ lệ thuận với thời gian." C="Quỹ đạo là một đoạn thẳng." D="Quỹ đạo là một đường hình sin." DapAnDung="C" GoiY="Giao động trong khoảng nhất định." DoKho="1" />
+<CauHoi MonHoc="Vật Lý" CauHoi="Lực kéo về tác dụng lên một chất điểm dao động điều hoà có độ lớn:" A="tỉ lệ với bình phương biên độ." B="không đổi nhưng hướng thay đổi." C="và hướng không đổi." D="tỉ lệ với độ lớn của li độ và luôn hướng về vị trí cân bằng." DapAnDung="D" GoiY="Độ lớn và hướng." DoKho="1" />
+</DeThi>
